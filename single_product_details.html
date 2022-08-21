@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,200&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <title>DStore -products</title>
+  </head>
+  <body>
+    <!-- Header section start from here -->
+   <div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="">
+                    <img src="./images/logo.png" alt="logo" width="125px" />
+                </a>
+            </div>
+            <nav>
+                <ul id="menuItems">
+                    <li>
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="./products.html">Products</a>
+                    </li>
+                    <li>
+                        <a href=#"">About</a>
+                    </li>
+                    <li>
+                        <a href=#"">Contact</a>
+                    </li>
+                    <li>
+                        <a href="./account.html">Account</a>
+                    </li>
+                </ul>
+            </nav>
+            <img src="./images/cart.png" alt="cart" class="cartIcon"/>
+            <img src="./images/menu.png" alt="menu" id="menu_icon" onclick="menutoggle()"/>
+        </div>
+    </div>
+   </div>
+   
+   <!-- single products page design start from here-->
+
+   <div class="single_product">
+    <div class="small_container">
+        <div class="row">
+            <div class="col-2">
+                <img src="./images/gallery-1.jpg" alt="imagesGallery" width="100%" id="LargeImage"/>
+                <div class="small_img_row">
+                    <div class="small_img_col">
+                        <img src="./images/gallery-1.jpg" alt="gallery-1" class="smallImage"/>
+                    </div>
+                    <div class="small_img_col">
+                        <img src="./images/gallery-2.jpg" alt="gallery-2" class="smallImage"/>
+                    </div>
+                    <div class="small_img_col">
+                        <img src="./images/gallery-3.jpg" alt="gallery-3" class="smallImage"/>
+                    </div>
+                    <div class="small_img_col">
+                        <img src="./images/gallery-4.jpg" alt="gallery-4" class="smallImage"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <p>Home /T-Shirt</p>
+                <h1>Red Printed T-Shirt</h1>
+                <p class="price">$ 50.00</p>
+                <br>
+                <select id="selectinId">
+                    <option value="small">Select size</option>
+                    <option value="small">S</option>
+                    <option value="medium">M</option>
+                    <option value="large">L</option>
+                    <option value="xlarge">XL</option>
+                    <option value="xxlarge">XXL</option>
+                </select>
+               <div>
+                <input type="number" name="quantity" id="quantity" value="1" placeholder="quantity"/> 
+                <a href="" class="btn">Add o Cart</a>
+               </div>
+                <h3>Product Detials <i class="fa fa-indent"></i> </h3>
+                <br />
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio similique ad eos blanditiis tempore necessitatibus eius suscipit veniam sit, deserunt vitae, dolorum aliquid dolore.</p>
+            </div>
+        </div>
+    </div>
+   </div>
+
+   <!-- related products -->
+
+   <div class="related_products">
+    <div class="small_container">
+        <div class="row">
+            <div class="col-2">
+                <h2>Related Products</h2>
+            </div>
+            <div class="col-2">
+                <a href="" class="viewMore">View More</a>
+            </div>
+        </div>
+    </div>
+   </div>
+
+  <div class="small_container" style="margin-top: 50px;"> 
+    <div class="row">
+        <div class="col-4">
+            <img src="./images/product-1.jpg" alt="product1" />
+            <h4 class="title">Red Printed T-Shirt</h4>
+           <div class="rating">
+                <box-icon type='solid' name='star'></box-icon>
+                <box-icon type='solid' name='star'></box-icon>
+                <box-icon type='solid' name='star'></box-icon>
+                <box-icon type='solid' name='star'></box-icon>
+                <box-icon type='solid' name='star-half'></box-icon>
+           </div>
+          <p>$50.00</p>
+        </div>
+        <div class="col-4">
+            <img src="./images/product-2.jpg" alt="product1" />
+            <h4 class="title">HRX Shoe</h4>
+           <div class="rating">
+                <box-icon type='solid' name='star'></box-icon>
+                <box-icon type='solid' name='star'></box-icon>
+                <box-icon type='solid' name='star'></box-icon>
+                <box-icon type='solid' name='star-half'></box-icon>
+           </div>
+          <p>$20.00</p>
+        </div>
+        <div class="col-4">
+            <img src="./images/product-3.jpg" alt="product1" />
+            <h4 class="title">Nike Pent</h4>
+           <div class="rating">
+                <box-icon type='solid' name='star'></box-icon>
+                <box-icon type='solid' name='star'></box-icon>
+                <box-icon type='solid' name='star'></box-icon>
+                <box-icon type='solid' name='star'></box-icon>
+                <box-icon type='solid' name='star-half'></box-icon>
+           </div>
+          <p>$60.00</p>
+        </div>
+        <div class="col-4">
+            <img src="./images/product-4.jpg" alt="product1" />
+            <h4 class="title">Blue Nike T-Shirt</h4>
+           <div class="rating">
+                <box-icon type='solid' name='star'></box-icon>
+                <box-icon type='solid' name='star'></box-icon>
+                <box-icon type='solid' name='star'></box-icon>
+                <box-icon type='solid' name='star'></box-icon>
+                <box-icon type='solid' name='star-half'></box-icon>
+           </div>
+          <p>$65.00</p>
+        </div>
+    </div> 
+  </div>
+  </div>
+ 
+  <!-- footer -->
+  <div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and iso mobile phone</p>
+               <div class="app-logo">
+                <img src="./images/play-store.png" alt="play-store" />
+                <img src="./images/app-store.png" alt="app-store" />
+               </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="./images/logo-white.png" alt="logo-white" />
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dolore quia, accusamus cupiditate doloribus dignissimos!</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Usefull Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blogs</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>YouTube</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">copyright &#169; 2022 -Rezzak Ali </p>
+    </div>
+  </div>
+  <script>
+    // menu bar
+    const menuItems = document.getElementById('menuItems');
+
+    menuItems.style.maxHeight = '0px';
+
+    function menutoggle() {
+      if (menuItems.style.maxHeight === '0px') {
+        menuItems.style.maxHeight = '200px';
+      } else {
+        menuItems.style.maxHeight = '0px';
+      }
+    }
+  </script>
+  <script>
+    // single page different image showing
+
+    var largeImage = document.getElementById('LargeImage');
+
+    var smallImage = document.getElementsByClassName('smallImage');
+
+    smallImage[0].addEventListener('click', function () {
+      largeImage.src = smallImage[0].src;
+    });
+    smallImage[1].addEventListener('click', function () {
+      largeImage.src = smallImage[1].src;
+    });
+    smallImage[2].addEventListener('click', function () {
+      largeImage.src = smallImage[2].src;
+    });
+    smallImage[3].addEventListener('click', function () {
+      largeImage.src = smallImage[3].src;
+    });
+  </script>
+  <script>
+    const LoginForm = document.getElementById('LoginForm');
+    const RegisterForm = document.getElementById('RegisterForm');
+    const Indicator = document.getElementById('Indicator');
+
+    const login = document.getElementById('login');
+    const register = document.getElementById('register');
+
+    register.addEventListener('click', function () {
+      RegisterForm.style.transform = 'translateX(0px)';
+      LoginForm.style.transform = 'translateX(0px)';
+      Indicator.style.transform = 'translateX(10px)';
+    });
+
+    login.addEventListener('click', function () {
+      RegisterForm.style.transform = 'translateX(300px)';
+      LoginForm.style.transform = 'translateX(300px)';
+      Indicator.style.transform = 'translateX(-140px)';
+    });
+  </script>
+  </body>
+</html>

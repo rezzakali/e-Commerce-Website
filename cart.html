@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <title>DStore -home</title>
+  </head>
+  <body>
+    <!-- Header section start from here -->
+    <div class="header">
+      <div class="container">
+        <div class="navbar">
+          <div class="logo">
+            <a href="">
+              <img src="./images/logo.png" alt="logo" width="125px" />
+            </a>
+          </div>
+          <nav>
+            <ul id="menuItems">
+              <li>
+                <a href="./index.html">Home</a>
+              </li>
+              <li>
+                <a href="./products.html">Products</a>
+              </li>
+              <li>
+                <a href="">About</a>
+              </li>
+              <li>
+                <a href="">Contact</a>
+              </li>
+              <li>
+                <a href="./account.html">Account</a>
+              </li>
+            </ul>
+          </nav>
+          <a href="./cart.html">
+            <img src="./images/cart.png" alt="cart" class="cartIcon" />
+          </a>
+          <img
+            src="./images/menu.png"
+            alt="menu"
+            id="menu_icon"
+            onclick="menutoggle()"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="cart_page">
+      <div class="small_container">
+        <table>
+          <tr>
+            <th>Products</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+          </tr>
+          <tr>
+            <td>
+              <div class="cart_info">
+                <img src="./images/buy-1.jpg" alt="buy-1" />
+                <div>
+                  <p>Red Printed T-Shirt</p>
+                  <p>Price $ 50.00</p>
+                  <a href="#">Remove</a>
+                </div>
+              </div>
+            </td>
+            <td><input type="number" value="1" /></td>
+            <td id="price">$ 50.00</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="cart_info">
+                <img src="./images/buy-2.jpg" alt="buy-2" />
+                <div>
+                  <p>Red Printed T-Shirt</p>
+                  <p>Price $ 50.00</p>
+                  <a href="#">Remove</a>
+                </div>
+              </div>
+            </td>
+            <td><input type="number" value="1" /></td>
+            <td id="price">$ 20.00</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="cart_info">
+                <img src="./images/buy-3.jpg" alt="buy-3" />
+                <div>
+                  <p>Red Printed T-Shirt</p>
+                  <p>Price $ 50.00</p>
+                  <a href="#">Remove</a>
+                </div>
+              </div>
+            </td>
+            <td><input type="number" value="1" /></td>
+            <td id="price">$ 60.00</td>
+          </tr>
+        </table>
+        <div class="total_price">
+          <table>
+            <tr>
+              <td>Subtotal</td>
+              <td>$ 200.00</td>
+            </tr>
+            <tr>
+              <td>Tax</td>
+              <td>$ 40.00</td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td class="total">$ 240.00</td>
+            </tr>
+          </table>
+        </div>
+        <a href="#" class="btn" type="button" id="checkout"
+          >Procced to Checkout &#8594;
+        </a>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>Download Our App</h3>
+            <p>Download App for Android and iso mobile phone</p>
+            <div class="app-logo">
+              <img src="./images/play-store.png" alt="play-store" />
+              <img src="./images/app-store.png" alt="app-store" />
+            </div>
+          </div>
+          <div class="footer-col-2">
+            <img src="./images/logo-white.png" alt="logo-white" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+              dolore quia, accusamus cupiditate doloribus dignissimos!
+            </p>
+          </div>
+          <div class="footer-col-3">
+            <h3>Usefull Links</h3>
+            <ul>
+              <li>Coupons</li>
+              <li>Blogs</li>
+              <li>Return Policy</li>
+              <li>Join Affiliate</li>
+            </ul>
+          </div>
+          <div class="footer-col-4">
+            <h3>Follow Us</h3>
+            <ul>
+              <li>Facebook</li>
+              <li>YouTube</li>
+              <li>Twitter</li>
+              <li>Instagram</li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <p class="copyright">copyright &#169; 2022 -Rezzak Ali</p>
+      </div>
+    </div>
+    <script>
+      // menu bar
+      const menuItems = document.getElementById('menuItems');
+
+      menuItems.style.maxHeight = '0px';
+
+      function menutoggle() {
+        if (menuItems.style.maxHeight === '0px') {
+          menuItems.style.maxHeight = '200px';
+        } else {
+          menuItems.style.maxHeight = '0px';
+        }
+      }
+    </script>
+    <script>
+      // single page different image showing
+
+      var largeImage = document.getElementById('LargeImage');
+
+      var smallImage = document.getElementsByClassName('smallImage');
+
+      smallImage[0].onclick = function () {
+        largeImage.src = smallImage[0].src;
+      };
+      smallImage[1].onclick = function () {
+        largeImage.src = smallImage[1].src;
+      };
+      smallImage[2].onclick = function () {
+        largeImage.src = smallImage[2].src;
+      };
+      smallImage[3].onclick = function () {
+        largeImage.src = smallImage[3].src;
+      };
+    </script>
+    <script>
+      const LoginForm = document.getElementById('LoginForm');
+      const RegisterForm = document.getElementById('RegisterForm');
+      const Indicator = document.getElementById('Indicator');
+
+      const login = document.getElementById('login');
+      const register = document.getElementById('register');
+
+      register.addEventListener('click', function () {
+        RegisterForm.style.transform = 'translateX(0px)';
+        LoginForm.style.transform = 'translateX(0px)';
+        Indicator.style.transform = 'translateX(10px)';
+      });
+
+      login.addEventListener('click', function () {
+        RegisterForm.style.transform = 'translateX(300px)';
+        LoginForm.style.transform = 'translateX(300px)';
+        Indicator.style.transform = 'translateX(-140px)';
+      });
+    </script>
+  </body>
+</html>
